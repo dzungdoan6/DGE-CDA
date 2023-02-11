@@ -16,7 +16,7 @@ Suppose the source code is saved in `[ROOT_DIR]/Energy-Aware-CDA/`
 * Copy all images from `[ROOT_DIR]/DGTA_SeaDronesSee_jpg/train/images/` to `[ROOT_DIR]/Energy-Aware-CDA/datasets/DGTA_SeaDronesSee_merged/images/`
 * Copy all images from `[ROOT_DIR]/DGTA_SeaDronesSee_jpg/val/images/` to `[ROOT_DIR]/Energy-Aware-CDA/datasets/DGTA_SeaDronesSee_merged/images/`
 * Create folder `experiments/` inside `[ROOT_DIR]/Energy-Aware-CDA/datasets/DGTA_SeaDronesSee_merged/`
-* Download all json files from HERE and put them in `[ROOT_DIR]/Energy-Aware-CDA/datasets/DGTA_SeaDronesSee_merged/experiments/`
+* Download all json files from [HERE](https://drive.google.com/drive/folders/1pYuIfSNG31ks6Q1_Bb292cdOa32R68PZ?usp=sharing) and put them in `[ROOT_DIR]/Energy-Aware-CDA/datasets/DGTA_SeaDronesSee_merged/experiments/`
 
 Finally, we should obtain
 * all images saved in `[ROOT_DIR]/Energy-Aware-CDA/datasets/DGTA_SeaDronesSee_merged/images/` 
