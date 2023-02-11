@@ -102,12 +102,12 @@ def main():
     print("\n")
     cfg = get_cfg()
     cfg.merge_from_file(args.config_file);
+    os.makedirs(cfg.OUTPUT_DIR, exist_ok=True)
 
     # register datasets
     register_coco_instances(cfg.DATASETS.TRAIN[0], {}, args.annos_dir + "/" + cfg.DATASETS.TRAIN[0] + ".json", args.imgs_dir)
     register_coco_instances(cfg.DATASETS.TEST[0], {}, args.annos_dir + "/" + cfg.DATASETS.TEST[0] + ".json", args.imgs_dir)
     
-
     model = build_model(cfg);
     do_train(cfg, model);
 

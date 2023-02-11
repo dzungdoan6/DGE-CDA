@@ -1,7 +1,7 @@
 _BASE_: "Base-RetinaNet.yaml"
 
 MODEL:
-  WEIGHTS: "detectron2://ImageNetPretrained/MSRA/R-50.pkl"
+  WEIGHTS: "https://dl.fbaipublicfiles.com/detectron2/COCO-Detection/retinanet_R_50_FPN_3x/190397829/model_final_5bd44e.pkl"
   RESNETS:
     DEPTH: 50
   RETINANET:
@@ -21,8 +21,9 @@ DATALOADER:
   NUM_WORKERS: 0
 
 DATASETS:
-  TRAIN: (train_CLEAR_9-15,)
-  TEST: (val_CLEAR_9-15,)
+  TRAIN: ('train_CLEAR_9-15',)
+  TEST: ('val_CLEAR_9-15',)
+
 INPUT:
   MIN_SIZE_TRAIN: (0,)
   MIN_SIZE_TEST: 0
