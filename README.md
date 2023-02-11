@@ -1,8 +1,6 @@
-**Suppose the source code is saved in `[ROOT_DIR]/Energy-Aware-CDA/`**
-
 ## Installation
 Our installation is mainly based on [Detectron2's installation](https://detectron2.readthedocs.io/en/latest/tutorials/install.html) with few modifications
-* Clone this repo
+* Clone this repo, suppose the source code is saved in `[ROOT_DIR]/Energy-Aware-CDA/`
 * Install Python >= 3.7 (tested on Python 3.9)
 * Install Pytorch >= 1.8 and torchvision that matches the Pytorch installation (tested on Pytorch 1.11, torchvision 0.12, CUDA 11.3)
 * Install OpenCV `pip install opencv-python` (tested on opencv-python 4.5.5.64)
