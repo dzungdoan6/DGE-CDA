@@ -6,7 +6,8 @@ Our installation is mainly based on [Detectron2's installation](https://detectro
 * Install OpenCV `pip install opencv-python` (tested on opencv-python 4.5.5.64)
 * Run `cd [ROOT_DIR]`
 * Run `python -m pip install -e Energy-Aware-CDA`
-* Run `cd [ROOT_DIR]/Energy-Aware-CDA`s
+* Run `cd [ROOT_DIR]/Energy-Aware-CDA`
+* Install POT library (`pip install POT`)
 
 
 ## Dataset preparation
@@ -21,5 +22,9 @@ Our installation is mainly based on [Detectron2's installation](https://detectro
 Finally, we should obtain
 * all images located in `[ROOT_DIR]/Energy-Aware-CDA/datasets/DGTA_SeaDronesSee_merged/images/` 
 * and all json files located in `[ROOT_DIR]/Energy-Aware-CDA/datasets/DGTA_SeaDronesSee_merged/experiments/`
+
+## DEMO
+* Pretrain RetinaNet on source domain `python cda/pretrain_source.py --config-file configs/dgta.yaml`
+
 
 
