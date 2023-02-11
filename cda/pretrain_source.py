@@ -12,9 +12,6 @@ from detectron2.utils.events import CommonMetricPrinter, EventStorage, JSONWrite
 from detectron2.data.datasets import register_coco_instances
 from detectron2.evaluation import COCOEvaluator, inference_on_dataset
 
-
-
-
 def parse_args():
     import argparse
 
