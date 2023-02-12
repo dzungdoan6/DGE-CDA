@@ -102,7 +102,7 @@ def main():
     print("\n")
     cfg = get_cfg()
     cfg.merge_from_file(args.config_file);
-    os.makedirs(cfg.OUTPUT_DIR, exist_ok=True)
+    os.makedirs(cfg.OUTPUT_DIR, exist_ok=True);
 
     # register datasets
     register_coco_instances(cfg.DATASETS.TRAIN[0], {}, args.annos_dir + "/" + cfg.DATASETS.TRAIN[0] + ".json", args.imgs_dir)
@@ -111,7 +111,7 @@ def main():
     model = build_model(cfg);
     do_train(cfg, model);
 
-    do_test(model, cfg.DATASETS.TEST[0])
+    # do_test(cfg, model);
 
 if __name__ == "__main__":
     main();
