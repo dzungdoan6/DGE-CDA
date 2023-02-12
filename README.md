@@ -50,15 +50,15 @@ Finally, we should obtain
 
 * Randomly generate random projections 
 
-`python cda/generate_random_projections.py --save-dir work_dir/DeepGTAV/projections`
+    `python cda/generate_random_projections.py --save-dir work_dir/DeepGTAV/projections`
 
-We should find 3 projections in the folder `work_dir/DeepGTAV/projections`
+    We should find 3 projections in the folder `work_dir/DeepGTAV/projections`
 
 * To plot the histograms of AP discrepancy and domain gaps (Fig.5 in the paper), run 
 
-`python cda/plot_correlation.py --config-file configs/dgta.yaml --projs-dir work_dir/DeepGTAV/projections`
+    `python cda/plot_correlation.py --config-file configs/dgta.yaml --projs-dir work_dir/DeepGTAV/projections`
 
-This script will take about 4h in Intel-Core-i7 with 16GB RAM and NVIDIA GeForce GTX 1080Ti
+    This script will take about 4h in Intel-Core-i7 with 16GB RAM and NVIDIA GeForce GTX 1080Ti
 
 * To reproduce the results in Table 5, 
     - run `python` for SDA with DGE. 
