@@ -44,9 +44,9 @@ Finally, we should obtain
 ## DEMO
 * Pretrain RetinaNet on source domain 
 
-`python cda/pretrain_source.py --config-file configs/dgta.yaml`
+    `python cda/pretrain_source.py --config-file configs/dgta.yaml`
 
-After the training finishes, we should find `model_final.pth` located in `work_dir/DeepGTAV/CLEAR_9-15/`
+    After the training finishes, we should find `model_final.pth` located in `work_dir/DeepGTAV/CLEAR_9-15/`
 
 * Randomly generate random projections 
 
