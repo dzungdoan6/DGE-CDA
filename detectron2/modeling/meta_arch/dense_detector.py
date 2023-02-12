@@ -93,7 +93,7 @@ class DenseDetector(nn.Module):
             in :doc:`/tutorials/models`.
         """
         images = self.preprocess_image(batched_inputs)
-        features = self.backbone(images.tensor)
+        features, bottom_up_features = self.backbone(images.tensor)
         features = [features[f] for f in self.head_in_features]
         predictions = self.head(features)
 
@@ -115,7 +115,7 @@ class DenseDetector(nn.Module):
                 width = input_per_image.get("width", image_size[1])
                 r = detector_postprocess(results_per_image, height, width)
                 processed_results.append({"instances": r})
-            return processed_results
+            return processed_results, bottom_up_features
 
     def forward_training(self, images, features, predictions, gt_instances):
         raise NotImplementedError()

@@ -8,6 +8,8 @@ Our installation is mainly based on [Detectron2's installation](https://detectro
 * Run `python -m pip install -e Energy-Aware-CDA`
 * Run `cd [ROOT_DIR]/Energy-Aware-CDA`
 * Install POT library (`pip install POT`)
+* Install pyJoules (`pip install pyJoules`)
+* Install tqdm (`pip install tqdm`)
 
 
 ## Dataset preparation
@@ -24,7 +26,13 @@ Finally, we should obtain
 * and all json files located in `[ROOT_DIR]/Energy-Aware-CDA/datasets/DGTA_SeaDronesSee_merged/experiments/`
 
 ## DEMO
-* Pretrain RetinaNet on source domain `python cda/pretrain_source.py --config-file configs/dgta.yaml`
+* Pretrain RetinaNet on source domain `python cda/pretrain_source.py --config-file configs/dgta.yaml`. After the training finishes, we should find `model_final.pth` located in `work_dir/DeepGTAV/CLEAR_9-15/`
 
+* Randomly generate random projections `python cda/generate_random_projections.py --save-dir work_dir/DeepGTAV/projections`, then we should find 3 projections in the folder `work_dir/DeepGTAV/projections`
 
+* To plot the histograms of AP discrepancy and domain gaps (Fig.5 in the paper), run `python cda/plot_correlation.py --config-file configs/dgta.yaml --projs-dir work_dir/DeepGTAV/projections`. This script will take about 4h in Intel-Core-i7 with 16GB RAM and NVIDIA GeForce GTX 1080Ti
 
+* To reproduce the results in Table 5, 
+    - run `python` for SDA with DGE. 
+    - run `python` for SDA w/o DGE. 
+        - It should be noted that there is a common error `Permission denied: '/sys/class/powercap/intel-rapl/intel-rapl:0/energy_uj'`. To resolve it, simply grant the permission `sudo chmod -R 7777 /sys/class/powercap/intel-rapl/intel-rapl:0`
