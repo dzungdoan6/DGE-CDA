@@ -61,7 +61,7 @@ Finally, we should obtain
     This script will take about 4h in Intel-Core-i7 with 16GB RAM and NVIDIA GeForce GTX 1080Ti
 
 * To reproduce the results in Table 5, 
-    - run `python` for SDA with DGE. 
-    - run `python` for SDA w/o DGE. 
+    - run `python cda/cont_dgta.py --config-file configs/dgta_cont.yaml --projs-dir work_dir/DeepGTAV/projections --gap-thr 0.02 --dge` for SDA with DGE. 
+    - run `python cda/cont_dgta.py --config-file configs/dgta_cont.yaml` for SDA w/o DGE. 
         - It should be noted that there is a common error `Permission denied: '/sys/class/powercap/intel-rapl/intel-rapl:0/energy_uj'`. To resolve it, simply grant the permission 
         `sudo chmod -R 7777 /sys/class/powercap/intel-rapl/intel-rapl:0`
