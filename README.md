@@ -14,11 +14,11 @@ Our installation is mainly based on [Detectron2's installation](https://detectro
 
 * Run `cd [ROOT_DIR]/Energy-Aware-CDA`
 
-* Install POT library (`pip install POT`)
+* Install POT library `pip install POT`
 
-* Install pyJoules (`pip install pyJoules[nvidia]`)
+* Install pyJoules `pip install pyJoules[nvidia]`
 
-* Install tqdm (`pip install tqdm`)
+* Install tqdm `pip install tqdm`
 
 
 # Dataset preparation
@@ -46,32 +46,39 @@ Finally, we should obtain
     ```
     python cda/pretrain_source.py --config-file configs/dgta.yaml
     ```
-    
     After the training finishes, we should find `model_final.pth` located in `work_dir/DeepGTAV/CLEAR_9-15/`
 
 * Randomly generate random projections 
     ```
     python cda/generate_random_projections.py --save-dir work_dir/DeepGTAV/projections
     ```
-
     We should find 3 projections in the folder `work_dir/DeepGTAV/projections`
 
 * To plot the histograms of AP discrepancy and domain gaps (Fig.5 in the paper), run 
-
-    `python cda/plot_correlation.py --config-file configs/dgta.yaml --projs-dir work_dir/DeepGTAV/projections`
+    ```
+    python cda/plot_correlation.py --config-file configs/dgta.yaml --projs-dir work_dir/DeepGTAV/projections
+    ```
 
     This script will take about 4h in Intel-Core-i7 with 16GB RAM and NVIDIA GeForce GTX 1080Ti
 
 * To reproduce the results in Table 5, 
 
-    - run `python cda/cont_dgta.py --config-file configs/dgta_cont.yaml --projs-dir work_dir/DeepGTAV/projections --gap-thr 0.02 --dge` for SDA with 
-    DGE. 
+    - For SDA with DGE
+    ```
+    `python cda/cont_dgta.py --config-file configs/dgta_cont.yaml --projs-dir work_dir/DeepGTAV/projections --gap-thr 0.02 --dge
+    ```
         - The trained models can be found in `work_dir/DeepGTAV/adapt_with_dge/`. The energy consumption record can be found in its subfolders, e.g., `work_dir/DeepGTAV/adapt_with_dge/CLEAR_9-15_and_OVERCAST_0-1/energy.csv`
 
-    - run `python cda/cont_dgta.py --config-file configs/dgta_cont.yaml` for SDA w/o DGE. 
+    - For SDA w/o DGE 
+    ```
+    python cda/cont_dgta.py --config-file configs/dgta_cont.yaml
+    ```
     
     - It should be noted that 
         - The energy unit is Joule
-        - there is a common error `Permission denied: '/sys/class/powercap/intel-rapl/intel-rapl:0/energy_uj'`. To resolve it, simply grant the permission `sudo chmod -R 7777 /sys/class/powercap/intel-rapl/intel-rapl:0`
+        - there is a common error `Permission denied: '/sys/class/powercap/intel-rapl/intel-rapl:0/energy_uj'`. To resolve it, simply grant the permission 
+        ```
+        sudo chmod -R 7777 /sys/class/powercap/intel-rapl/intel-rapl:0
+        ```
 
     
