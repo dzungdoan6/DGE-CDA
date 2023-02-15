@@ -12,11 +12,12 @@ Our installation is mainly based on [Detectron2's installation](https://detectro
     ``` 
     (tested on opencv-python 4.5.5.64)
 
-* Run `cd [ROOT_DIR]`
-
-* Run `python -m pip install -e Energy-Aware-CDA`
-
-* Run `cd [ROOT_DIR]/Energy-Aware-CDA`
+* Install detectron2 
+    ```
+    cd [ROOT_DIR] 
+    python -m pip install -e Energy-Aware-CDA 
+    cd [ROOT_DIR]/Energy-Aware-CDA
+    ```
 
 * Install POT library 
     ```
