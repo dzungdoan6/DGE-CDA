@@ -65,9 +65,9 @@ Finally, we should obtain
 
     - For SDA with DGE
     ```
-    `python cda/cont_dgta.py --config-file configs/dgta_cont.yaml --projs-dir work_dir/DeepGTAV/projections --gap-thr 0.02 --dge
+    python cda/cont_dgta.py --config-file configs/dgta_cont.yaml --projs-dir work_dir/DeepGTAV/projections --gap-thr 0.02 --dge
     ```
-        - The trained models can be found in `work_dir/DeepGTAV/adapt_with_dge/`. The energy consumption record can be found in its subfolders, e.g., `work_dir/DeepGTAV/adapt_with_dge/CLEAR_9-15_and_OVERCAST_0-1/energy.csv`
+    The trained models can be found in `work_dir/DeepGTAV/adapt_with_dge/`. The energy consumption record can be found in its subfolders, e.g., `work_dir/DeepGTAV/adapt_with_dge/CLEAR_9-15_and_OVERCAST_0-1/energy.csv`
 
     - For SDA w/o DGE 
     ```
