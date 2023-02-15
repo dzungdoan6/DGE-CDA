@@ -6,7 +6,11 @@ Our installation is mainly based on [Detectron2's installation](https://detectro
 
 * Install Pytorch >= 1.8 and torchvision that matches the Pytorch installation (tested on Pytorch 1.11, torchvision 0.12, CUDA 11.3)
 
-* Install OpenCV `pip install opencv-python` (tested on opencv-python 4.5.5.64)
+* Install OpenCV 
+    ```
+    pip install opencv-python
+    ``` 
+    (tested on opencv-python 4.5.5.64)
 
 * Run `cd [ROOT_DIR]`
 
@@ -14,11 +18,20 @@ Our installation is mainly based on [Detectron2's installation](https://detectro
 
 * Run `cd [ROOT_DIR]/Energy-Aware-CDA`
 
-* Install POT library `pip install POT`
+* Install POT library 
+    ```
+    pip install POT
+    ```
 
-* Install pyJoules `pip install pyJoules[nvidia]`
+* Install pyJoules 
+    ```
+    pip install pyJoules[nvidia]
+    ```
 
-* Install tqdm `pip install tqdm`
+* Install tqdm 
+    ```
+    pip install tqdm
+    ```
 
 
 # Dataset preparation
