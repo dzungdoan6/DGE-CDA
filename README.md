@@ -87,6 +87,7 @@ Finally, we should obtain
     ```
     python cda/cont_dgta.py --config-file configs/dgta_cont.yaml
     ```
+    The trained models can be found in `work_dir/DeepGTAV/adapt_wo_dge/`. The energy consumption record can be found in its subfolders.
     
     - It should be noted that 
         - The energy unit is Joule
