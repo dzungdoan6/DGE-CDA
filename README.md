@@ -1,3 +1,16 @@
+# About
+This is the source code of the paper [Assessing Domain Gap for Continual Domain Adaptation in Object Detection](https://arxiv.org/abs/2302.10396)
+
+If you find our code is useful, please cite:
+```bibtex
+@article{Doan23DGECDA,
+    author    = {Anh-Dzung Doan and Bach Long Nguyen and Surabhi Gupta and Ian Reid and Markus Wagner and Tat-Jun Chin},
+    title     = {Assessing Domain Gap for Continual Domain Adaptation in Object Detection},
+    journal   = {arXiv preprint arXiv:2302.10396},
+    year      = {2023}
+}
+```
+
 # Installation
 Our installation is mainly based on [Detectron2's installation](https://detectron2.readthedocs.io/en/latest/tutorials/install.html) with few modifications
 * Clone this repo, suppose the source code is saved in `[ROOT_DIR]/DGE-CDA/`
