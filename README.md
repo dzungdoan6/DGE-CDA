@@ -6,8 +6,8 @@ If you find our code is useful, please cite:
 @article{Doan23DGECDA,
     author    = {Anh-Dzung Doan and Bach Long Nguyen and Surabhi Gupta and Ian Reid and Markus Wagner and Tat-Jun Chin},
     title     = {Assessing Domain Gap for Continual Domain Adaptation in Object Detection},
-    journal   = {arXiv preprint arXiv:2302.10396},
-    year      = {2023}
+    journal   = {Computer Vision and Image Understanding},
+    year      = {2024}
 }
 ```
 
